@@ -12,6 +12,7 @@ const Header = () => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container fluid>
+            <h4 style={{"color":'darkred',"fontStyle":"Bebas Neue",fontSize:"25px",fontWeight:"bolder",paddingTop:"5px",paddingRight:"20px"}}>RoyalFlix</h4>
                 <Navbar.Brand href="/" style={{"color":'gold'}}>
                     <FontAwesomeIcon icon ={faVideoSlash}/>Gold
                 </Navbar.Brand>
@@ -22,6 +23,7 @@ const Header = () => {
                             style={{maxHeight: '100px'}}
                             navbarScroll
                         >
+                           
                         <NavLink className ="nav-link" to="/">Home</NavLink>
                         <NavLink className ="nav-link" to="/watchList">Watch List</NavLink>      
                     </Nav>
