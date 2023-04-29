@@ -1,5 +1,4 @@
 import './App.css';
-import api from './API/axiosConfig';
 import {useState, useEffect} from 'react';
 import Layout from './components/layout';
 import {Routes, Route} from 'react-router-dom';
@@ -8,6 +7,7 @@ import Header from './components/header/Header';
 import Trailer from './components/trailer/Trailer';
 import Reviews from './components/reviews/Reviews';
 import NotFound from './components/notFound/NotFound';
+import axios from 'axios';
 
 function App() {
 
@@ -20,8 +20,8 @@ function App() {
     try
     {
 
-      const response = await api.get("/api/v1/movies");
-     // console.log(response.data)
+      const response = await axios.get("http://localhost:8080/api/v1/movies");
+      //console.log(response.data)
 
       setMovies(response.data);
 
@@ -37,7 +37,7 @@ function App() {
      
     try 
     {
-        const response = await api.get(`/api/v1/movies/${movieId}`);
+        const response = await axios.get(`/api/v1/movies/${movieId}`);
 
         const singleMovie = response.data;
 

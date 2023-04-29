@@ -32,8 +32,11 @@
     width:100%;
 }
 .movie-title{
-    color:white;
+    color:rgb(162, 158, 158);
     display: flex;
+    font-weight: 300;
+    font-size: x-large;
+    font-style: italic;
     align-items: center;
 }
 
